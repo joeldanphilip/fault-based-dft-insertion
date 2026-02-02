@@ -1,0 +1,14 @@
+# Fault Tool Artifacts
+parser.out
+parsetab.py
+thr*
+*.intermediate.v
+*.svf
+*.out
+
+# Large generated files (optional, uncomment if you want to exclude them)
+# patterns_xl.tv.json
+
+# OS generated files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,9 @@
+read_verilog counter.v
+read_liberty -lib osu035_stdcells.lib
+synth -top counter
+dfflibmap -liberty osu035_stdcells.lib
+proc; opt; flatten; opt
+techmap
+opt
+stat
+write_verilog counter_trial.v
