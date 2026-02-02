@@ -42,7 +42,7 @@ docker run -ti --rm \
 
 ### 2. Scan Cut (Break Scan Loops)
 
-It is necessary to perform a "cut" in the Fault flow to break scan loops, as discussed in the IEEE papers on Fault.
+It is necessary to perform a "cut" in the Fault flow to break scan loops.
 
 **Command:**
 ```bash
