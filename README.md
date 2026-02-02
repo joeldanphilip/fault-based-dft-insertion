@@ -15,11 +15,18 @@ The workflow focuses on testability analysis of a counter, performing scan chain
 - **Library Files in Repo**: `osu035_stdcells.lib` (Liberty format), `osu035_stdcells.v` (Verilog format) (See: [University of Oklahoma / Oklahoma State University Digital VLSI](https://github.com/AUCOHL/Fault/tree/main/Tech/osu035))
 - **Fault Documentation**: [Fault Read the Docs](https://fault.readthedocs.io/en/latest/usage.html)
 
+## Key Concepts
+
+- **DFT (Design for Testability)**: Techniques added to hardware design to make it easier to develop and apply manufacturing tests.
+- **ATPG (Automatic Test Pattern Generation)**: An electronic design automation method/technology used to find an input (or test) sequence that, when applied to a digital circuit, enables automatic test equipment to distinguish between the correct circuit behavior and the faulty circuit behavior caused by defects.
+- **Fault Coverage**: The percentage of detected faults out of all possible faults in the design.
+- **Test Compaction**: Techniques to reduce the number of test vectors (and thus test time/cost) while maintaining fault coverage.
+
 ## Workflow Steps
 
 ### 1. Scan Insertion (FAULT chain)
 
-This step performs scan Flip-Flop replacement and insertion to create a scan chain.
+This step performs **Scan Flip-Flop replacement and insertion** to create a scan chain. By replacing standard Flip-Flops (FFs) with Scan FFs, we transform the sequential circuit into a combinational one during test mode, significantly improving observability and controllability.
 
 ![Scan Chain Insertion](chain%20insert.png)
 
@@ -42,7 +49,13 @@ docker run -ti --rm \
 
 ### 2. Scan Cut (Break Scan Loops)
 
+<<<<<<< HEAD
 It is necessary to perform a "cut" in the Fault flow to break scan loops.
+=======
+### 2. Scan Cut (Break Scan Loops)
+
+It is necessary to **perform a "cut"** in the Fault flow to break scan loops. As discussed in the IEEE papers on Fault (available in the course page), combinatorial loops created by the scan chain insertion can disrupt the ATPG process. The `fault cut` command identifies and breaks these loops to ensure proper test pattern generation.
+>>>>>>> aaf8323 (Update README with detailed DFT concepts and step descriptions)
 
 **Command:**
 ```bash
