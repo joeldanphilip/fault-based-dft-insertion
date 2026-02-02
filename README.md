@@ -49,13 +49,9 @@ docker run -ti --rm \
 
 ### 2. Scan Cut (Break Scan Loops)
 
-<<<<<<< HEAD
-It is necessary to perform a "cut" in the Fault flow to break scan loops.
-=======
-### 2. Scan Cut (Break Scan Loops)
 
-It is necessary to **perform a "cut"** in the Fault flow to break scan loops. As discussed in the IEEE papers on Fault (available in the course page), combinatorial loops created by the scan chain insertion can disrupt the ATPG process. The `fault cut` command identifies and breaks these loops to ensure proper test pattern generation.
->>>>>>> aaf8323 (Update README with detailed DFT concepts and step descriptions)
+
+It is necessary to **perform a "cut"** in the Fault flow to break scan loops, combinatorial loops created by the scan chain insertion can disrupt the ATPG process. The `fault cut` command identifies and breaks these loops to ensure proper test pattern generation.
 
 **Command:**
 ```bash
